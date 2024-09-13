@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-page-a',
@@ -8,7 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class PageAComponent implements OnInit {
   @Input() title?: string;
   counter: number = 0;
+  @Output() counterOutput: EventEmitter<any> = new EventEmitter();
+
   textValue = ""
+
 
 
 
@@ -32,6 +35,7 @@ export class PageAComponent implements OnInit {
     console.log(this.title); // a
     setInterval(() => {
       this.counter++;
+      this.counterOutput.emit({ num: this.counter });
     }, 1000);
   }
 
@@ -44,6 +48,11 @@ export class PageAComponent implements OnInit {
   // when we first created the content of the component ==> <ng-content>
   ngAfterContentInit() {
     console.log("4. ngAfterContentInit")
+  }
+
+  // When we update the content
+  ngAfterContentChecked() {
+    console.log("5. ngAfterContentChecked")
   }
 
 

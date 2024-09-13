@@ -1,7 +1,8 @@
 <!--
 <input type="text" (keydown)="keyDownFunc($event)" (keyup)="keyUpFunc($event)" (keypress)="keyPressFunc($event)" >
 -->
-<app-page-a title="this is my title">
+<app-page-a (counterOutput)="counterGetter($event)" title="this is my title">
     <p>ng content</p>
     <a href="">ng</a>
+    {{numberCount}}
 </app-page-a>

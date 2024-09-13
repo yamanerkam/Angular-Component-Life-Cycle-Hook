@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  numberCount: number | undefined;
+  counterGetter(obj: any) {
+    console.log(obj);
+    this.numberCount = obj.num;
+  }
   title = 'component-life-cycle-hook';
 
 
