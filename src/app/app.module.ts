@@ -3,18 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PageAComponent } from './components/page-a/page-a.component';
+import { PageAModule } from './components/page-a/page-a.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    PageAComponent
-  ],
+    AppComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PageAModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [PageAModule]
 })
 export class AppModule { }
