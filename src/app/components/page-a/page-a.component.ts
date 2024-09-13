@@ -55,5 +55,16 @@ export class PageAComponent implements OnInit {
     console.log("5. ngAfterContentChecked")
   }
 
+  //component VIEW
+  ngAfterViewInit() {
+    console.log("6. ngAfterViewInit")
+  }
+
+  ngAfterViewChecked() {
+    console.log("7. ngAfterViewChecked")
+  }
+
+
+
 
 }
