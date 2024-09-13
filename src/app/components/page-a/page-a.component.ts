@@ -64,7 +64,9 @@ export class PageAComponent implements OnInit {
     console.log("7. ngAfterViewChecked")
   }
 
-
-
+  ngOnDestroy() {
+    console.log("final")
+    console.log("8. ngOnDestroy")
+  }
 
 }
