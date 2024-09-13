@@ -10,17 +10,24 @@ export class PageAComponent implements OnInit {
 
   // constructure is not about the angular architecture, it is about the programming
   constructor() {
-    console.log("constructor")
+    console.log("0. constructor")
+    console.log(this.title); // undefined
   }
 
 
   //it fires when the component has an input value
   ngOnChanges() {
-    console.log("ngOnChanges")
-    console.log(this.title);
+    console.log("1. ngOnChanges")
+    console.log(this.title); // has value from the param
   }
 
+  // when we first create the component 
+  ngOnInit(): void {
+    console.log("1. ngOnInit")
+    this.title = "a"
+    console.log(this.title); // a
 
+  }
 
 
 
