@@ -33,10 +33,11 @@ export class PageAComponent implements OnInit {
     console.log("2. ngOnInit")
     this.title = "a"
     console.log(this.title); // a
-    setInterval(() => {
-      this.counter++;
-      this.counterOutput.emit({ num: this.counter });
-    }, 1000);
+    /* setInterval(() => {
+       this.counter++;
+       this.counterOutput.emit({ num: this.counter });
+     }, 1000);
+     */
   }
 
   // when we update the component ==> any change on the component
