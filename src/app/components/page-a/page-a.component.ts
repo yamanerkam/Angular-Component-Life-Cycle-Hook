@@ -41,5 +41,10 @@ export class PageAComponent implements OnInit {
     console.log("3. ngDoCheck")
   }
 
+  // when we first created the content of the component ==> <ng-content>
+  ngAfterContentInit() {
+    console.log("4. ngAfterContentInit")
+  }
+
 
 }
